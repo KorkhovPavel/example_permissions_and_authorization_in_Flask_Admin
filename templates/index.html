@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% if current_user.get_id() -%}
+    <h3><a href="{{ url_for('logout') }}">logout</a></h3>
+    <h3><a href="{{ url_for('admin.index') }}">admin</a></h3>
+    {% else %}
+    <h3><a href="{{ url_for('login') }}">login</a></h3>
+    {% endif -%}
+    <h1>Home</h1>
+
+</body>
+</html>

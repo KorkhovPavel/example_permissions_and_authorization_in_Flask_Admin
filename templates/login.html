@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h3><a href="{{ url_for('index') }}">Home</a></h3>
+    <form action="/login" method="POST">
+    <input type="text" placeholder="login" maxlength="10" name="login" value="" required>
+    <input type="password" placeholder="password" maxlength="10" name="password" value="" required>
+    <button type="submit">Enter</button>
+    </form>
+</body>
+</html>
